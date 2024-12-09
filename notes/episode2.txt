@@ -1,0 +1,23 @@
+parcel
+-dev build
+-local server-HMR-hot module replacement
+-File watching algo-written in c++
+-caching faster build-image optimization
+-minification
+-
+bundling
+-
+compress
+consistent hasing
+coode spliting
+differential bundling-support older browsers
+diagnostic
+error handling
+https
+tree shaking
+different build for dev and prod
+
+
+npm parcel build index.html //for prod
+
+browserlis.dev
