@@ -1,62 +1,20 @@
 import React from "react";
-//import ReactDOM  from "react-dom";
-import ReactDOM from "react-dom/client"
+import ReactDOM from "react-dom/client";
 
-/* <div id="parent">
-    <div id="child">
-        <h1></h1>
-        <h2></h2>
-    </div>
-</div> */
+//react.createElemt ->object - after rendering it is html
+const heading = React.createElement(
+    "h1",
+    {id:'heading'},
+    "Render hi"
+);
 
-// const parent = React.createElement(
-//     'div',
-//     {id:'parent'},
-//     React.createElement(
-//         'div',
-//         {id:'child'},
-//         React.createElement('h1',{},'i am a child h1')
-//     )
-// )
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const parent = React.createElement(
-    'div',
-    {id:'parent'},
-    React.createElement(
-        'div',
-        {id:'child'},
-        [React.createElement('h1',{},'i am a child h1'),React.createElement('h2',{},'i am a child h2')]
-    )
-)
+root.render(heading);
+console.log(heading)
 
-console.log(parent);
+//jsx-javascript syntax to create react element
 
-//Recat element create an object
+const jsxheading =<h1>This is a valid JSX</h1>
 
-
- const root = ReactDOM.createRoot(document.getElementById('root'));
- console.log('root',root)
-
- root.render(parent);
-
- //root.render will replace everything inside root element
-
-
-
-
-
-
-
-
-
-// const heading =  React.createElement("h1",
-//     {id:'heading'},
-//     "hellow world from react"
-// );
-//     //{} here we can give attribute to the element
-// console.log(heading);
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-
-// root.render(heading);
-
-//render = converting object into an elemnet and updating in DOM
+console.log(jsxheading)

@@ -1,0 +1,25 @@
+//package.json-script we can add the script
+
+//jsx-javascript syntax to create react element
+
+jsx provide easy way to write react code
+
+jsx is a html like syntax.
+jsx is a syntax extension for javascript.
+
+code --- transpiled --befor it reaches JS engine
+transpiled means convert into the code which browser understand
+
+jsx => React.createElement => React element -js object=> HTMLElement(render)
+
+
+parcel build--
+babel - js compiler (transpiling)
+parcel - bundler (packaging)
+
+babel--take jsx -- then convert that in react.createElement
+babel reads jsx 1 by 1,pass token 1 by 1
+
+attribute -of various transpilinge.g-image/ahref/script
+
+wrap in () if multiline for jsx syntax
