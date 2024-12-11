@@ -1,0 +1,17 @@
+//React Component
+
+1.class based Component ----old way (do not use)-avoid
+
+2.Functional Component ----new (latest),uses JS Functiona
+
+React Functional Component-
+
+1.JS function ,start with Capital letter and return a jsx
+
+//React functional Compnent-a function which return a jsx(return react elemnt )
+
+//component composition  -------- putting one componenet inside another component .
+
+if we write anything inside {} -we can write any js expression inside -we can injecta any js code inside cury brackets
+
+if malicias attack cross site scripting-jsx will sanitize it automatically
