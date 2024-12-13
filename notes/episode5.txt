@@ -2,7 +2,15 @@
 //food ordering app
 
 //headercomponet
+-logo
+-Nav items
 
 //body
+-search
+-restaurant container
+    -restaurant card
+    
 
 //footercomponet
+
+

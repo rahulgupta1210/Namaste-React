@@ -1,3 +1,35 @@
 #heading{
     color: red;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+}
+
+.logo {
+    width:100px;
+    padding: 10px;
+}
+
+.navitems {
+    padding: 0px 20px;
+}
+
+.navitems > ul {
+    font-size: 24px;
+    display: flex;
+    list-style-type: none;
+}
+
+.navitems > ul > li {
+    padding: 10px;
+    margin: 10px;
+}
+
+.res-card {
+    width: 200px;
+    height: 300px;
+    border: 1px solid black;
+}
