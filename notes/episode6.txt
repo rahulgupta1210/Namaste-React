@@ -1,0 +1,10 @@
+//props - 
+1-pass properties to the other component 
+2-normal arguements to a function
+
+
+//destructuring
+
+const {resName ,cusins} = props;
+
+//config driven UI
