@@ -1,26 +1,108 @@
-
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-const HeaderComponent = () => {
-    return (
-        <div className="header">
-            <div className="logoContainer">
-                <img className="logo" src="https://s3.amazonaws.com/cdn.designcrowd.com/blog/39-Food-Delivery-Logos-That-Will-Leave-You-Hungry-For-More/food-delivery-by-simplepixelsl-brandcrowd.png"></img>
-            </div>
-            <div className="navitems">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact US</li>
-                    <li>Cart</li>
-
-                </ul>
-
-            </div>
-        </div>
-    )
+const resObj = {
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+    "info": {
+        "id": "396742",
+        "name": "Behrouz Biryani",
+        "cloudinaryImageId": "a4ffed13eb197c6df43dfe1c756560e5",
+        "locality": "Residency Road",
+        "areaName": "Shantinagar",
+        "costForTwo": "₹500 for two",
+        "cuisines": [
+            "Biryani",
+            "North Indian",
+            "Kebabs",
+            "Mughlai",
+            "Lucknowi",
+            "Hyderabadi",
+            "Desserts",
+            "Beverages"
+        ],
+        "avgRating": 4.3,
+        "parentId": "1803",
+        "avgRatingString": "4.3",
+        "totalRatingsString": "1.1K+",
+        "sla": {
+            "deliveryTime": 32,
+            "lastMileTravel": 1.5,
+            "serviceability": "SERVICEABLE",
+            "slaString": "30-35 mins",
+            "lastMileTravelString": "1.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2024-12-14 23:59:00",
+            "opened": true
+        },
+        "badges": {
+            "textExtendedBadges": [
+                {
+                    "iconId": "guiltfree/GF_Logo_android_3x",
+                    "shortDescription": "options available",
+                    "fontColor": "#7E808C"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "textBased": {},
+                "imageBased": {},
+                "textExtendedBadges": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "iconId": "guiltfree/GF_Logo_android_3x",
+                                "description": "",
+                                "shortDescription": "options available",
+                                "fontColor": "#7E808C"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "50% OFF",
+            "subHeader": "UPTO ₹100",
+            "logoCtx": {
+                "text": "BENEFITS"
+            }
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {},
+            "commsStyling": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {},
+    "cta": {
+        "link": "swiggy://menu?restaurant_id=396742&source=collection&query=Biryani",
+        "text": "RESTAURANT_MENU",
+        "type": "DEEPLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
 }
+
 
 const resList = [
     {
@@ -121,7 +203,7 @@ const resList = [
     {
         "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
         "info": {
-            "id": "41100",
+            "id": "41102",
             "name": "Hotel Empire",
             "cloudinaryImageId": "10f8b483521b9359d9c8fcd37f23c9d3",
             "locality": "Majestic",
@@ -783,62 +865,3 @@ const resList = [
         "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
     }
 ]
-
-
-
-const styleCard = {
-    backgroundColor: '#f0f0f0'
-}
-
-
-const Body = () => {
-    return (
-        <div className="body">
-            <div className="search">search</div>
-            <div className="res-container">
-
-                {resList.map((restaurant) => (
-                    <RestaurantCard key={restaurant.info.id} resData={restaurant} />
-                ))}
-            </div>
-        </div>
-    )
-}
-
-const RestaurantCard = (props) => {
-    const { resData } = props;
-    console.log('abcd', resData)
-    const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, deliveryTime } = resData?.info;
-
-    return (
-        <div className="res-card" style={styleCard}>
-            <img
-                className="res-logo"
-                alt="res-logo"
-                src={
-                    "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" + cloudinaryImageId}
-            >
-            </img>
-            <h3>{name}</h3>
-            <h3>{cuisines.join(",")}</h3>
-            <h4>{avgRating}</h4>
-            <h4>{costForTwo}</h4>
-            <h4>{deliveryTime}</h4>
-        </div>
-    )
-}
-
-
-
-const Applayout = () => {
-    return <div className="app">
-        <HeaderComponent />
-        <Body />
-
-
-    </div>;
-}
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(<Applayout />);

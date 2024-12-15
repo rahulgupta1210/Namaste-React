@@ -8,3 +8,14 @@
 const {resName ,cusins} = props;
 
 //config driven UI
+
+//put images on CDN good practice
+
+//use destructring for render in {}
+
+//use map,reduce inplace of for loop
+
+//we need to give different id -- because it will not rerender in dom if that id 
+exists earlier if we dont write key performance issue - react will not identify if key doesnt exists
+
+//react official doc says dont use index as key as order can changes consider as anti-pattern
