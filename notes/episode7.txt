@@ -1,1 +1,16 @@
 //separate file for separate components
+
+//hardcoded should be in different file and never keep in component
+
+//component name should be in capital and camelcase
+
+//only one default export if ne file contains multiple const etc then use named exort add export in the begining
+
+//2 types of export and important
+
+1.default export (name of var,componentname)-  import componentname \\ var
+
+2.named export/import
+
+export const component
+import {component} path
