@@ -1,0 +1,33 @@
+React Hooks
+React Hooks are JavaScript utility functions.
+
+useState() (80% of usage)
+
+Provides powerful state variables in React, or special React variables.
+
+Maintains the state of the component.
+
+javascript
+const [listofRes, setListofRes] = useState([resList]);
+To modify the useState variable, pass a second parameter.
+
+If the state changes, the component will re-render.
+
+When data changes, it re-renders the components.
+
+React ensures fast DOM operations by only manipulating the DOM.
+
+Keeps the data layer and view layer in sync.
+
+useEffect() (20% of usage)
+
+React Algorithm
+React uses the Reconciliation algorithm, also known as React Fiber (introduced in React 16).
+
+React Fiber is a new way to efficiently find differences and update the DOM.
+
+The Virtual DOM is a representation of the actual DOM.
+
+The Diff algorithm finds differences between the old Virtual DOM and the new Virtual DOM, and updates the main DOM accordingly.
+
+React Fiber: Efficient DOM manipulation using React Fiber.
