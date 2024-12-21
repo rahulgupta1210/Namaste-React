@@ -1,0 +1,40 @@
+Monolith Architecture:-
+
+//whole team work on same repo.
+//whole app need deployment for small changes
+
+----------------------------------------------------------
+
+Microservices:-
+//each team work on different repo.
+//single resposibility principal
+//separation of concern
+//all services will run in different port -diff port we can deploy diff services
+
+
+approach 1
+
+Load ---> Api--->render
+
+approach 2
+
+Load--->Render ---->Api ---->Rerender
+
+React render cycle is efficient
+
+useEffect hooks --->(hook is normal js function which has special purpose)
+
+--React library used as named import.
+
+useEffect(()=>{
+console.log('abce')
+},[])
+
+//fetch the data in useEffect hook
+
+
+//fetch used to fetch from api it is given by browser
+
+//shimmer ui -load fake page untill we get the real data
+//user will be able to anticipate the card and whatever is comin
+
