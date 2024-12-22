@@ -33,8 +33,20 @@ console.log('abce')
 //fetch the data in useEffect hook
 
 
+    //once body component render then useEffect hook will be called after component has been rendered.
+
+
 //fetch used to fetch from api it is given by browser
 
 //shimmer ui -load fake page untill we get the real data
 //user will be able to anticipate the card and whatever is comin
 
+//useState -use
+
+//we need to bind the input with value and use the onchhange methdo
+
+//whenever change the local state var component is getting rerendered
+
+//whenever state variables update ,react triggers a reconcialiatin cycle (re-render the component)
+
+//react fiber compare two vertual dom and find the difference and update the exact place where is the change

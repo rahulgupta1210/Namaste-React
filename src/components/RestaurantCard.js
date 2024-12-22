@@ -6,7 +6,7 @@ const styleCard = {
 
 const RestaurantCard = (props) => {
     const { resData } = props;
-    console.log('abcd', resData)
+   // console.log('abcd', resData)
     const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, deliveryTime } = resData?.info;
 
     return (
