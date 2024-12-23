@@ -1,11 +1,17 @@
 import { LOGO_URL } from "../../utils/constant";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 
 function HeaderComponent() {
 
     let btnName = "Login";
     console.log('header render on page load and on click of login button also')
+
+//useeffect-after evry render of the componet,everytime header component render useEffect will be called if no dependency array [];
+//dependency array(optional)-
+    useEffect(()=>{
+        console.log('useeffect called');
+    },[])
 
     //local variable react will not able to track
     //whenever state variable change react will re-render the header component
@@ -38,3 +44,6 @@ function HeaderComponent() {
 }
 
 export default HeaderComponent;
+
+
+
