@@ -1,6 +1,6 @@
 import { LOGO_URL } from "../../utils/constant";
 import { useState,useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 
 function HeaderComponent() {
