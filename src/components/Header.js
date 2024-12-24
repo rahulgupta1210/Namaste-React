@@ -1,5 +1,6 @@
 import { LOGO_URL } from "../../utils/constant";
 import { useState,useEffect } from "react";
+import { Link } from "react-router-dom";
 
 
 function HeaderComponent() {
@@ -23,10 +24,18 @@ function HeaderComponent() {
             </div>
             <div className="navitems">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact US</li>
-                    <li>Cart</li>
+                    <li>
+                        <Link to="/home">Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/about">About</Link>
+                    </li>
+                    <li>
+                        <Link to="/contact">Contact US</Link>
+                    </li>
+                    <li>
+                        <Link>Cart</Link>
+                    </li>
                     <button className="login"
                         onClick={() => {
                             btnName = "Logout";

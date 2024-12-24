@@ -1,0 +1,28 @@
+//useeffect-after evry render of the componet,everytime header component render useEffect will be called if no dependency array [];
+//dependency array(optional)-
+useEffect(() => {
+    console.log('useeffect called');
+})
+//called only once as no dependency injection array
+
+
+useEffect(() => {
+    console.log('useeffect called');
+}, [])
+
+//called multiple time on component render
+
+useEffect(() => {
+    console.log('useeffect called');
+}, [btnNameReact])
+
+//if dependency injection btnNameReact name changes it will be called
+
+
+---------------------------------------------------------
+    useState() - Hooks: -
+        ---------------------------------------------------
+
+=>call always inside body, fucntion component
+=> on the top to maintain consistency
+=> never create useState inside if else or forloop or inside function

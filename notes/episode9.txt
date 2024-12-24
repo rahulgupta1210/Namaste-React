@@ -50,3 +50,5 @@ console.log('abce')
 //whenever state variables update ,react triggers a reconcialiatin cycle (re-render the component)
 
 //react fiber compare two vertual dom and find the difference and update the exact place where is the change
+
+//cross proxy we can use for bypass for cors

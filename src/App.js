@@ -7,7 +7,7 @@ import Body from "./components/Body";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
-import { createBrowserRouter, RouterProvider,Outlet } from "react-router";
+import { BrowserRouter as Router, Route, Switch, createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const Applayout = () => {
     console.log('Virtual DOOM e.g', <Body />)//normal js obj

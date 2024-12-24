@@ -1,0 +1,5 @@
+
+//<a href ='/about'></a> 
+--on click of href whole page got refreshed ,so avoid using anchor tag
+
+//react-router-dom given ---Link 
