@@ -8,3 +8,5 @@
 
 1.client side Routing-- all component are loaded first time
 2.server side Routing ---make network call and page is coming from server
+
+const response = await fetch(MenuAPIUrl+ resId);
