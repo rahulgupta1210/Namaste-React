@@ -20,6 +20,7 @@ const Body = () => {
 
     const fetchData = async () => {
         const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.902157887494267&lng=77.70266828616035&collection=83637&tags=layout_CCS_Burger&sortBy=&filters=&type=rcv2&offset=0&page_type=null');
+        //const data = await fetch('data.cards[1].card.card.gridElements.infoWithStyle.restaurants[3].info')
         const json = await data.json();
         // console.log(json?.data?.cards[2]?.data?.data?.cards);
         let dataToBeshown = []

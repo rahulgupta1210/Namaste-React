@@ -10,3 +10,5 @@
 2.server side Routing ---make network call and page is coming from server
 
 const response = await fetch(MenuAPIUrl+ resId);
+
+behind the seen <link> is using anchor tag,link is 
