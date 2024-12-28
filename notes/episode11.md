@@ -1,4 +1,4 @@
-# Class based component
+# Class based component all theory and lifeCycle
 
 # class name of class  extends React.Component
 use render method to return the jsx
@@ -63,4 +63,29 @@ componntdidmunt in details?
 2.Commit phase
     .componnetDidMount
 
+
+//cmpnnet will render with default value 
+
+//constructr will be called with dummy data 
+//then componet didmount was called and api call finished
+//setState will update the state variable -react trigger render once again with state value ll be updated with new value
+//componntDidUpdate is called at end.
+
+
+# Mounting Cycle
+-   Constructor is called
+-   Render will be called (dummy data)
+-   <HTML loaded wit dummy data >
+-   componentDidMount called in which we called API
+-   This.setState called --state variable is updated
+
+# Update Cycle
+
+-   render(API Data)
+-   <HTML loaded with real data>
+-   componentDidUpdate called
+
+
+# Unmounting
+-   componentWillUnmount called when we move to other route e.g.click on contactUs
 

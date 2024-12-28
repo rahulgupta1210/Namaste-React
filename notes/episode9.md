@@ -1,28 +1,28 @@
-Monolith Architecture:-
+# Monolith Architecture:-
 
 //whole team work on same repo.
 //whole app need deployment for small changes
 
 ----------------------------------------------------------
 
-Microservices:-
+# Microservices:-
 //each team work on different repo.
 //single resposibility principal
 //separation of concern
 //all services will run in different port -diff port we can deploy diff services
 
 
-approach 1
+# approach 1
 
 Load ---> Api--->render
 
-approach 2
+# approach 2
 
 Load--->Render ---->Api ---->Rerender
 
 React render cycle is efficient
 
-useEffect hooks --->(hook is normal js function which has special purpose)
+# useEffect hooks --->(hook is normal js function which has special purpose)
 
 --React library used as named import.
 
@@ -30,11 +30,26 @@ useEffect(()=>{
 console.log('abce')
 },[])
 
+useEffect(()=>{
+ const timer = setInterVal(()=>{
+    console.log('render')
+ },1000)   
+ console.log('useeffect);
+ return ()=>{
+    clearInterVal(timer)
+    console.log('use effect return)
+ };
+
+},[])
+
+//useEffect why we can not use async
+
+//use effect return will be used in functional componnet as willmounting phase if we leave the page
+
+// dependency injection satisfied that many time render will be called
 //fetch the data in useEffect hook
 
-
-    //once body component render then useEffect hook will be called after component has been rendered.
-
+//once body component render then useEffect hook will be called after component has been rendered.
 
 //fetch used to fetch from api it is given by browser
 

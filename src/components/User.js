@@ -1,9 +1,20 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const User =({name})=>{
 
     const [count] = useState(0);
     const [count2] = useState(1);
+
+    useEffect(()=>{
+        console.log("useEffect called");
+    },[count,count2]);
+    //if count or count2 changes then only useEffect will be called
+
+    async function fetchData(){
+        const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+        const data = await response.json();
+        console.log(data);
+    }
 
     return(
         <div className="user-card">

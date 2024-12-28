@@ -10,6 +10,9 @@ constructor(props) {
 }
 
 componentDidMount() {
+    this.setInterval(() => {
+        console.log("parent setInterval");
+    }, 1000);
     console.log("parent componentDidMount");
 }
 
@@ -19,9 +22,9 @@ componentDidMount() {
             <div>
                 <h1>About</h1>
                 <h2>This is about Page</h2>
-                <User name={"rahul gupta-function component"} />
+                <User name={"rahul gupta111-function component"} />
                 <UserClass name={"first from class component"} location={"Bengaluru"} />
-                <UserClass name={"second from class component"} location={"US"} />
+                {/* <UserClass name={"second from class component"} location={"US"} /> */}
 
 
             </div>
