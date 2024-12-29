@@ -24,28 +24,28 @@ function HeaderComponent() {
    
 
     return (
-        <div className="header">
+        <div className="flex justify-between bg-pink-100 shadow-lg sm:bg-brown-100">
             <div className="logoContainer">
-                <img className="logo" src={LOGO_URL}></img>
+                <img className="w-28" src={LOGO_URL}></img>
             </div>
-            <div className="navitems">
-                <ul>
-                    <li>
+            <div className="flex items-center">
+                <ul className="flex p-4 m-4">
+                    <li className="px-4">
                         Online Status : {onlineStatus ? " ✅" : "🔴"}
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link to="/home">Home</Link>
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link to="/about">About</Link>
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link to="/contact">Contact US</Link>
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li>
+                    <li className="px-4">
                         <Link>Cart</Link>
                     </li>
                     <button className="login"
