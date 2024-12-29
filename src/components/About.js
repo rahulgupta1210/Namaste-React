@@ -10,9 +10,7 @@ constructor(props) {
 }
 
 componentDidMount() {
-    this.setInterval(() => {
-        console.log("parent setInterval");
-    }, 1000);
+   
     console.log("parent componentDidMount");
 }
 

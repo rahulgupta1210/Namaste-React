@@ -4,6 +4,8 @@ import RestaurantCard from "./RestaurantCard";
 import { useState } from "react";
 import { useEffect } from "react";
 import Shimmer from "./Shimmer";
+import useOnlineStatus from "../../utils/useOnlineStatus";
+
 const Body = () => {
 
     const [listOfRestaurants, setListOfRestaurants] = useState([]);//whatever we pass will be the initial value
@@ -37,6 +39,13 @@ const Body = () => {
     // if(listOfRestaurants?.length === 0){
     //     return <Shimmer/>;
     // }
+
+    const onlineStatus = useOnlineStatus();
+
+    if(onlineStatus === false){
+        return <h1>You are offline</h1>
+
+    }
 
 
 

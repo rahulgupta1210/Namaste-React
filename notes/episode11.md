@@ -88,4 +88,6 @@ componntdidmunt in details?
 
 # Unmounting
 -   componentWillUnmount called when we move to other route e.g.click on contactUs
+- in single page application if we are navigatig to different stil componentDidMount will be called so to clear that we need to
+-   componentWillUnmount called to clear the previous state
 

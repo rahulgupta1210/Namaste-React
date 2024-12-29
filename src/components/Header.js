@@ -1,12 +1,15 @@
 import { LOGO_URL } from "../../utils/constant";
 import { useState,useEffect } from "react";
 import { Link } from "react-router";
+import useOnlineStatus from "../../utils/useOnlineStatus";
 
 
 function HeaderComponent() {
 
     let btnName = "Login";
     console.log('header render on page load and on click of login button also')
+    const onlineStatus = useOnlineStatus();
+
 
 //useeffect-after evry render of the componet,everytime header component render useEffect will be called if no dependency array [];
 //dependency array(optional)-
@@ -17,6 +20,9 @@ function HeaderComponent() {
     //local variable react will not able to track
     //whenever state variable change react will re-render the header component
     const [btnNameReact, setBtnNameReact] = useState("Login"); //special local variable
+
+   
+
     return (
         <div className="header">
             <div className="logoContainer">
@@ -25,6 +31,9 @@ function HeaderComponent() {
             <div className="navitems">
                 <ul>
                     <li>
+                        Online Status : {onlineStatus ? " ✅" : "🔴"}
+                    </li>
+                    <li>
                         <Link to="/home">Home</Link>
                     </li>
                     <li>
@@ -32,6 +41,9 @@ function HeaderComponent() {
                     </li>
                     <li>
                         <Link to="/contact">Contact US</Link>
+                    </li>
+                    <li>
+                        <Link to="/grocery">Grocery</Link>
                     </li>
                     <li>
                         <Link>Cart</Link>
