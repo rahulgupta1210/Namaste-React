@@ -1,29 +1,35 @@
 
-//import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router";
-import useRestaurantMenu from "../../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
+//import useRestaurantMenu from "../../utils/useRestaurantMenu";
+//import { useState } from "react";
 
 const RestaurantMenu = () => {
 
     const { resId } = useParams();
     console.log(resId);
 
-    //const [resInfo, setResInfo] = useState(null);
+    const dummy = "Dummy data";
 
-    const resInfo = useRestaurantMenu();
+    const [resInfo, setResInfo] = useState(null);
 
-    // useEffect(() => {
-    //     fetchMenu();
-    // }, [])
+    const [showIndex,setShowIndex] = useState(null)
 
-    // const fetchMenu = async () => {
-    //     // const response = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId=31627&catalog_qa=undefined&query=Biryani&submitAction=ENTER');
-    //     const response = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId="425&catalog_qa=undefined&query=Biryani&submitAction=ENTER')
-    //     const json = await response.json();
-    //     console.log(json);
-    //     setResInfo(json.data);
-    // }
+    //const resInfo = useRestaurantMenu();
+
+    useEffect(() => {
+        fetchMenu();
+    }, [])
+
+    const fetchMenu = async () => {
+        const response = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId=31627&catalog_qa=undefined&query=Biryani&submitAction=ENTER');
+        //const response = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9352403&lng=77.624532&restaurantId="425&catalog_qa=undefined&query=Biryani&submitAction=ENTER')
+        const json = await response.json();
+        console.log(json);
+        setResInfo(json.data);
+    }
 
     if ((resInfo === null)) {
         return <Shimmer />;
@@ -35,22 +41,26 @@ const RestaurantMenu = () => {
 
     //const {itemCards} = data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[2].card.card.itemCards
 
-    console.log(itemCards);
+    const categories = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter((c) => c.card?.['card']?.["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory");
+
+    // console.log(categories);
+    // console.log(itemCards);
+
 
     return (
-        <div className="menu">
-            <h1>{name}</h1>
-            <p>{cuisines.join(",")} --{costForTwo}</p>
-            <ul>
-                {itemCards.map(
-                    (item) => {
-                        console.log(item.card.info.name);
-                        return (
-                            <li key={item.card.info.id}>{item.card.info.name} ----- {"Rs"} {item.card.info.price/100 || item.card.info.defaultPrice/100}</li>
-                        );
-                    })
-                }
-            </ul>
+        <div className="text-center">
+            <h1 className="font-bold my-6 text-2xl">{name}</h1>
+            <p className="font-bold text-lg">{cuisines.join(",")} --{costForTwo}</p>
+            {categories.map((category,index) => (
+                <RestaurantCategory 
+                key={category?.card?.card?.title} 
+                data={category?.card?.card} 
+                showItems={index === showIndex ?true :false}
+                setShowIndex = {()=>setShowIndex(index)}
+                dummy ={dummy}
+                 />
+            ))}
+            
         </div>
     )
 }

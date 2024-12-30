@@ -4,7 +4,7 @@ import useState from 'react';
 
 
 
-const useRestaurantMenu = (resId) => {
+const useRestaurantMenu = () => {
 
     const [resInfo, setResInfo] = useState(null);
 

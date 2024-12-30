@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
 //import resList from "../../utils/mockData";
 
 import { useState } from "react";
@@ -12,6 +12,8 @@ const Body = () => {
     const [filteredRestaurants, setFilteredRestaurants] = useState([]);//whatever we pass will be the initial value
 
     const [searchText, setSearchtext] = useState("");
+
+    const RestaurantCardPromoted = withPromotedLabel(RestaurantCard);
 
 
     useEffect(() => {
@@ -138,7 +140,11 @@ const Body = () => {
             <div className="res-container flex flex-wrap">
 
                 {filteredRestaurants.map((restaurant) => (
-                    <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+                    restaurant?.info?.id ? (
+                        <RestaurantCardPromoted key={restaurant?.info?.id} resData={restaurant}/>
+                     ) : (
+                        <RestaurantCard key={restaurant?.info?.id} resData={restaurant} />
+                    )
                 ))}
             </div>
         </div>
