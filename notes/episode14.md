@@ -20,5 +20,26 @@ Data layer -state,props
 
 # lifting the state up
 
-# props drilling
+# props drilling read
+
+# react context we can just avoid prps drilling
+# react context is a way to share data between components without passing props down manually
+-context is a global place -so any where from app we can access data
+-kind of global variable .but dont use as this word
+-for class based componnet we can access context using UserContext.consumer (refer about page)
+-if we can wrap one component userContext provider there ony access l be there
+-Context is globa space that we can provide to all the app
+
+-useContext is the hook
+
+
+# power of context-
+
+if about us page is not loaded and we updatwd the user name i/p -if we load about it ll be updated value
+
+# context vs redux
+- context is used for small or medium app
+- redux is used for big app 
+-redux is scalabe
+- we need to create multiple context
 

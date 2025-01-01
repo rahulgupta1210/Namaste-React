@@ -2,9 +2,10 @@ import RestaurantCard, {withPromotedLabel} from "./RestaurantCard";
 //import resList from "../../utils/mockData";
 
 import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect ,useContext} from "react";
 import Shimmer from "./Shimmer";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+import UserContext from "../../utils/UserContext";
 
 const Body = () => {
 
@@ -48,6 +49,8 @@ const Body = () => {
         return <h1>You are offline</h1>
 
     }
+
+    const {loggedInUser,setUserName} = useContext(UserContext);
 
 
 
@@ -124,6 +127,7 @@ const Body = () => {
                     }}>
                         Search</button>
                 </div>
+                <div className="m-4 p-4 items-center">
                 <button className="px-4 py-2 bg-gray-100 m-4 rounded-lg" 
                     onClick={() => {
                         console.log('clicked');
@@ -136,7 +140,9 @@ const Body = () => {
                     }}
                 >
                     Top Rated Button</button>
+                    </div>
             </div>
+            User Name:<input className="border border-black" onChange={(e)=>setUserName(e.target.value)} value={loggedInUser}/>
             <div className="res-container flex flex-wrap">
 
                 {filteredRestaurants.map((restaurant) => (

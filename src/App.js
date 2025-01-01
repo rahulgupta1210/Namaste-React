@@ -1,5 +1,5 @@
 
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect,useState } from "react";
 import ReactDOM from "react-dom/client";
 
 import HeaderComponent from "./components/Header";
@@ -11,6 +11,8 @@ import { BrowserRouter as Router, Route, Switch, createBrowserRouter, RouterProv
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
 //import Grocery from "./components/Grocery";
+import UserContext from "../utils/UserContext";
+
 
 const Grocery = lazy(() => import('./components/Grocery'));
 
@@ -20,11 +22,28 @@ const About = lazy(() => import('./components/About'));
 const Applayout = () => {
     console.log('Virtual DOOM e.g', <Body />)//normal js obj
 
-    return <div className="app">
-        <HeaderComponent />
-        <Outlet /> 
-    </div>;
-}
+    //authentication
+    const [userName,setUserName] = useState();
+
+    useEffect(()=>{
+        //make api call and send username and pwd
+        const data = {
+            name:'rahul gupta'
+        };
+        setUserName(data.name)
+    },[])
+
+    return (
+        <UserContext.Provider value={{ loggedInUser: userName,setUserName }}>
+            <div className="app">
+                <HeaderComponent />
+                <Outlet />
+            </div>;
+        </UserContext.Provider>
+
+
+    );
+};
 
 //   {/**if path = / */}
 //   <Body />
@@ -48,7 +67,7 @@ const appRouter = createBrowserRouter([
             },
             {
                 path: "/contact",
-                element: <Contact Us />
+                element: <Contact />
             },
             {
                 path: "/grocery",

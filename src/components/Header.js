@@ -1,7 +1,8 @@
 import { LOGO_URL } from "../../utils/constant";
-import { useState,useEffect } from "react";
+import { useState,useEffect, useContext } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../../utils/useOnlineStatus";
+import UserContext from "../../utils/UserContext";
 
 
 function HeaderComponent() {
@@ -9,6 +10,10 @@ function HeaderComponent() {
     let btnName = "Login";
     console.log('header render on page load and on click of login button also')
     const onlineStatus = useOnlineStatus();
+
+    const data = useContext(UserContext)
+    const {loggedInUser} = data;
+    console.log(data)
 
 
 //useeffect-after evry render of the componet,everytime header component render useEffect will be called if no dependency array [];
@@ -56,6 +61,9 @@ function HeaderComponent() {
                         } }
                     >
                         {btnNameReact}</button>
+                        <li>
+                            {loggedInUser}
+                        </li>
 
                 </ul>
 
