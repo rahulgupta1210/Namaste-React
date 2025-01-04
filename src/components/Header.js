@@ -3,6 +3,7 @@ import { useState,useEffect, useContext } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 import UserContext from "../../utils/UserContext";
+import { useSelector } from "react-redux";
 
 
 function HeaderComponent() {
@@ -14,6 +15,10 @@ function HeaderComponent() {
     const data = useContext(UserContext)
     const {loggedInUser} = data;
     console.log(data)
+
+    //subscribing to the store using the selector- and identify which portion we need to access(cart items)
+    const cartItems = useSelector((store)=> store.cart.items);
+    console.log('cartItems',cartItems)
 
 
 //useeffect-after evry render of the componet,everytime header component render useEffect will be called if no dependency array [];
@@ -50,8 +55,8 @@ function HeaderComponent() {
                     <li className="px-4">
                         <Link to="/grocery">Grocery</Link>
                     </li>
-                    <li className="px-4">
-                        <Link>Cart</Link>
+                    <li className="px-4 font-bold text-xl">
+                        <Link to="/cart">Cart {cartItems.length}</Link>
                     </li>
                     <button className="login"
                         onClick={() => {
