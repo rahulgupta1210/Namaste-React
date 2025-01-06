@@ -20,5 +20,13 @@
 //Installed babel dependency
 //configure babel config
 //configure parcel config file to disable babel transpilation
+//jest configuration - npx jest --init
+//install jsdom lib
+//install  @babel/preset-react  to make js work for testcases
+//include babel preset inside babe config
+
+//_ _ =dunder
+
+//jsdom
 
 //parcel uses babel behind the seen if we add babel cnfig 
