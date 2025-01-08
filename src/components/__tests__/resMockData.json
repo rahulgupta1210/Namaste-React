@@ -1,0 +1,101 @@
+`{
+    "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
+    "info": {
+        "id": "649407",
+        "name": "McDonald's",
+        "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/9/18/a43df654-88b4-4bf7-bb19-e0c199fa6d92_649407.jpg",
+        "locality": "Kaikondrahalli",
+        "areaName": "Sarjapur RD",
+        "costForTwo": "₹400 for two",
+        "cuisines": [
+            "Burgers",
+            "Beverages",
+            "Cafe",
+            "Desserts"
+        ],
+        "avgRating": 4.4,
+        "parentId": "630",
+        "avgRatingString": "4.4",
+        "totalRatingsString": "5.9K+",
+        "promoted": true,
+        "adTrackingId": "cid=23663849~p=1~adgrpid=23663849#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=649407~eid=13873d63-7944-4390-bcab-75879d775dac~srvts=1736361934227~collid=83637",
+        "sla": {
+            "deliveryTime": 20,
+            "lastMileTravel": 3,
+            "serviceability": "SERVICEABLE",
+            "slaString": "15-20 mins",
+            "lastMileTravelString": "3.0 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2025-01-09 06:45:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "Rxawards/_CATEGORY-Burger.png",
+                    "description": "Delivery!"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "textBased": {},
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "imageId": "Rxawards/_CATEGORY-Burger.png",
+                                "description": "Delivery!"
+                            }
+                        }
+                    ]
+                },
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "₹50 OFF",
+            "subHeader": "ABOVE ₹249",
+            "discountTag": "FLAT DEAL",
+            "logoCtx": {
+                "text": "BENEFITS"
+            }
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {},
+            "commsStyling": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+        "campaignId": "23663849"
+    },
+    "analytics": {},
+    "cta": {
+        "link": "swiggy://menu?restaurant_id=649407&source=collection&query=Burger",
+        "text": "RESTAURANT_MENU",
+        "type": "DEEPLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+}`

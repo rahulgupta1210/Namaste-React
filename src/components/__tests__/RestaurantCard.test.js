@@ -1,20 +1,19 @@
+
+
 import { fireEvent, render } from "@testing-library/react";
-import { HeaderComponent } from "../Header";
+import { res } from "../Header";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router";
-import appStore from "../"
-
-
+import RestaurantCard from "../RestaurantCard";
+import resMockData from "./resMockData.json";
 
 It("test header component", () => {
 
     render(
-        <BrowserRouter>
-            <Provider store={store}>
-                <HeaderComponent />
-            </Provider>
-        </BrowserRouter>
+       <RestaurantCard resData={resMockData} />
 
+       const name = screen.getByText("McDonald's");
+       expect(name).toBeInTheDocument();
 
 
     )

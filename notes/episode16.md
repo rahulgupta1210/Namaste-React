@@ -37,3 +37,5 @@
 //one describe have nesting describe
 
 //test or it can be same alias for test
+
+//fireevent will be used if we want to test an event
