@@ -24,9 +24,16 @@
 //install jsdom lib
 //install  @babel/preset-react  to make js work for testcases
 //include babel preset inside babe config
+// include @testing-library/jest-dom
 
 //_ _ =dunder
 
 //jsdom
 
 //parcel uses babel behind the seen if we add babel cnfig 
+
+//describe blcok used to group one set of test cases,can have multiple describe in one file
+
+//one describe have nesting describe
+
+//test or it can be same alias for test
