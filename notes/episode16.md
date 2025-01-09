@@ -39,3 +39,7 @@
 //test or it can be same alias for test
 
 //fireevent will be used if we want to test an event
+
+//testcase are running in js-dom so we can not make actually api call so we need to mock 
+
+//if u use fetch -then use ACT(react-dom/test-utils) return promise
